@@ -1,12 +1,14 @@
-# Practica2
-practica 2
+# Solution to the concurrent bridge problem.
 
-Esta es la práctica 2.
 
-El objetivo es que los peatones, los coches en direccion norte, y los coches en dirección sur no pasen a la vez por el puente, esto es, se dejen paso mutuamente, y que no haya problemas de espera excesiva. 
+The goal is to ensure that pedestrians, northbound cars, and southbound cars do not cross the bridge at the same time. Instead, they must yield to one another to avoid conflicts while also preventing excessive waiting times.
 
-En la imagen esta la justificación del desarrollo del código y su corrección. 
-El archivo .py es el código. 
-El código es la versión final y correcta, sin inanición y con todos los coches y peatones en todas las direcciones. 
-Para tratar la inanición, se usa un sistema de turnos, debidamente explicado en las hojas. El código empieza basándose en una generalización del problema de los lectores-escritores y luego implementándole los turnos.
-De todas maneras, todas las ideas del código se comentan en la hoja de explicación.
+The attached image contains a justification of the code's development and its correctness. The .py file contains the final version of the code.
+
+The code is fully functional and correctly handles all cases, ensuring that no starvation occurs and that all vehicles and pedestrians can cross in both directions. To prevent starvation, the solution implements a turn-based system, which is thoroughly explained in the provided documentation.
+
+The implementation is based on a generalization of the classic readers-writers problem, a well-known challenge in concurrent programming. From this foundation, a turn-based mechanism is introduced to balance fairness among different types of traffic.
+
+All key ideas and design choices in the code are documented in the explanation file.
+
+This problem is an example of concurrent programming, where multiple entities (pedestrians and vehicles) need to share a limited resource (the bridge) without conflicts or inefficiencies. Synchronization mechanisms, such as semaphores or locks, are used to control access, ensuring fairness and preventing issues like deadlocks or starvation.
